@@ -1,0 +1,10 @@
+{
+  "total_lgas": 645,
+  "total_states": 37,
+  "total_oos_children": 15350651,
+  "national_oos_rate": 0.4107,
+  "critical_lgas": 75,
+  "high_risk_lgas": 247,
+  "children_records": 20000,
+  "dropout_rate": 0.3392
+}

@@ -1,0 +1,56 @@
+version: "3.9"
+
+services:
+  # ── FastAPI Backend ────────────────────────────────────────────────────────
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: edusentinel_api
+    ports:
+      - "8000:8000"
+    env_file: .env
+    volumes:
+      - ./data:/app/data
+      - ./mlruns:/app/mlruns
+      - ./chroma_db:/app/chroma_db
+    networks:
+      - edunet
+    restart: unless-stopped
+
+  # ── Streamlit Dashboard ───────────────────────────────────────────────────
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile.dashboard
+    container_name: edusentinel_dashboard
+    ports:
+      - "8501:8501"
+    env_file: .env
+    environment:
+      - API_BASE_URL=http://api:8000
+    volumes:
+      - ./data:/app/data
+      - ./chroma_db:/app/chroma_db
+    networks:
+      - edunet
+    depends_on:
+      - api
+    restart: unless-stopped
+
+  # ── MLflow Tracking ───────────────────────────────────────────────────────
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:v2.13.2
+    container_name: edusentinel_mlflow
+    ports:
+      - "5000:5000"
+    command: mlflow server --host 0.0.0.0 --port 5000 --backend-store-uri /mlruns
+    volumes:
+      - ./mlruns:/mlruns
+    networks:
+      - edunet
+    restart: unless-stopped
+
+networks:
+  edunet:
+    driver: bridge
