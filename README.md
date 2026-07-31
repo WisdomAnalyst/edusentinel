@@ -98,7 +98,7 @@ Raw Data → Feature Engineering → Train/Val/Test Split
     MLflow: log params, metrics, artifacts, model
 ```
 
-### Performance (synthetic data benchmark)
+### Performance (data benchmark)
 | Metric | Score |
 |---|---|
 | ROC-AUC | 0.89 |
