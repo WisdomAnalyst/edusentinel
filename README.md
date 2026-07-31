@@ -152,15 +152,14 @@ Children message the Kotlead WhatsApp number → Twilio webhook → EduBot → G
 ### Prerequisites
 - Python 3.11+
 - Google Gemini API key (free at [aistudio.google.com](https://aistudio.google.com/apikey))
-- (Optional) Twilio account for WhatsApp
+- Twilio account for WhatsApp
 
 ### Installation
 ```bash
 git clone https://github.com/kotlead/edusentinel
 cd edusentinel
 pip install -r requirements.txt
-cp .env.example .env
-# Edit .env — add your GOOGLE_API_KEY
+Added Env
 ```
 
 ### One-command bootstrap
@@ -287,10 +286,11 @@ Full interactive docs at `/docs` (Swagger UI) and `/redoc`.
 
 ## Roadmap
 
-**Phase 1 — Data & Dashboard** ✅ Complete  
-**Phase 2 — Dropout ML Pipeline** ✅ Complete  
-**Phase 3 — Multilingual AI Tutor** ✅ Complete  
+**Phase 1 — Data & Dashboard**    
+**Phase 2 — Dropout ML Pipeline** 
+**Phase 3 — Multilingual AI Tutor** 
 **Phase 4 — Production Deployment**
+Not Included
 - [ ] Deploy to AWS/GCP with production Postgres backend
 - [ ] Integrate live UNICEF & NBS data feeds
 - [ ] ACLED real-time conflict stream integration
@@ -309,4 +309,3 @@ We build for the 20 million children who cannot wait.
 
 ---
 
-*EduSentinel is open for collaboration with NGOs, government agencies, and development partners working on education access in Nigeria and across sub-Saharan Africa.*
