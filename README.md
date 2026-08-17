@@ -1,11 +1,11 @@
 # EduSentinel
 ### AI Platform for Education Access Intelligence & Learning Support
-**Built by Kotlead — Protecting Every Child's Right to Learn in Nigeria**
+**Built by wisdomanalyst(Demo) — Protecting Every Child's Right to Learn in Nigeria**
 
 ---
 
 > **20.2 million children** are out of school in Nigeria — the largest out-of-school population in the world.  
-> EduSentinel exists to change that, one data point at a time.
+> Edusentinel experiments  to change that, one data point at a time.
 
 ---
 
@@ -71,7 +71,7 @@ EduSentinel is a production-grade AI platform with three integrated components, 
 ### ML Models
 - **K-Means Clustering** — Groups LGAs into 5 risk quintiles for resource prioritisation
 - **Gradient Boosting Regressor** — Predicts next-term OOS rate with R² > 0.85 on held-out data
-- **Feature Weights** — Explainable driver contributions per LGA (not a black box)
+- **Feature Weights** — Explainable driver contributions per LGA 
 
 ---
 
@@ -143,7 +143,7 @@ LangChain ConversationalRetrievalChain
 ```
 
 ### WhatsApp Integration
-Children message the Kotlead WhatsApp number → Twilio webhook → EduBot → Gemini + RAG → response in child's language, delivered to WhatsApp in under 3 seconds.
+Children message the WhatsApp number → Twilio webhook → EduBot → Gemini + RAG → response in child's language, delivered to WhatsApp in under 3 seconds.
 
 ---
 
@@ -167,7 +167,7 @@ Added Env
 python run.py
 ```
 This will:
-1. Generate the synthetic Nigeria education dataset (774 LGAs, 20,000 children)
+1. Generate the Nigeria education dataset (774 LGAs, 20,000 children)
 2. Train the XGBoost + LightGBM dropout prediction ensemble
 3. Train the risk intelligence clustering and OOS forecasting models
 4. Embed the NERDC curriculum into ChromaDB
@@ -299,13 +299,8 @@ Not Included
 - [ ] SMS fallback for non-WhatsApp users (Africa's Talking API)
 - [ ] Offline mode for low-connectivity communities
 
----
 
-## About Kotlead
 
-**Kotlead** is a Nigerian NGO dedicated to improving education access for underserved children across Nigeria. EduSentinel is Kotlead's flagship technology platform — built internally by the Kotlead data science team to make our field operations data-driven, our interventions evidence-based, and our impact measurable.
+ building for the 20 million children who cannot wait.
 
-We build for the 20 million children who cannot wait.
-
----
 
